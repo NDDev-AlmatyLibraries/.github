@@ -18,3 +18,4 @@ jobs:
       contents: read
     with:
       hosted-runner: ubuntu-26.04
+      inline-merge-stops: false
