@@ -1,0 +1,20 @@
+# Pull requests run the short check and a push to dev the full check; promotion then moves main to
+# the checked dev commit.
+name: ci
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  check:
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/check.yml@2da2be8a4091667ff0d13ddcd6980082e97dfffd # v0.6.151
+    permissions:
+      contents: read
+    with:
+      hosted-runner: ubuntu-26.04

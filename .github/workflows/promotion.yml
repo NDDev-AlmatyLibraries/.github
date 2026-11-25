@@ -1,0 +1,20 @@
+# Moves main forward to the newest dev commit whose full check passed.
+name: promotion
+
+on:
+  # The pinned library selects checked dev pushes and executes no triggering source.
+  workflow_run: # zizmor: ignore[dangerous-triggers]
+    workflows: [ci]
+    branches: [dev]
+    types: [completed]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  promote:
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/promote.yml@2da2be8a4091667ff0d13ddcd6980082e97dfffd # v0.6.151
+    secrets: inherit # zizmor: ignore[secrets-inherit]
+    permissions:
+      actions: write
+      contents: read
