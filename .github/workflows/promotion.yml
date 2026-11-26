@@ -17,7 +17,7 @@ jobs:
       github.event_name != 'workflow_run'
       || (github.event.workflow_run.event == 'push'
       && github.event.workflow_run.head_repository.full_name == github.repository)
-    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/promote.yml@85c691357b27e79e8b9eb7a2b7130fb179cd4c13 # v0.6.172
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/promote.yml@125398887d3f3ac839ff89582482a4dc61acb766 # v0.6.174
     secrets: inherit # zizmor: ignore[secrets-inherit]
     permissions:
       actions: write
