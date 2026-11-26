@@ -13,4 +13,4 @@ jobs:
     permissions:
       contents: read
     with:
-      hosted-runner: ubuntu-26.04
+      public-self-hosted-runner: nddev-linux-light-public

@@ -22,3 +22,5 @@ jobs:
     permissions:
       actions: write
       contents: read
+    with:
+      public-self-hosted-runner: nddev-linux-light-public

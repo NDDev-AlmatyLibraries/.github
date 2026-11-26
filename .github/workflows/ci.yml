@@ -17,5 +17,5 @@ jobs:
     permissions:
       contents: read
     with:
-      hosted-runner: ubuntu-26.04
-      inline-merge-stops: false
+      public-self-hosted-runner: nddev-linux-light-public
+      retain-separate-merge-stops: true
