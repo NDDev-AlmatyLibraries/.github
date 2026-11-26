@@ -17,10 +17,10 @@ jobs:
       github.event_name != 'workflow_run'
       || (github.event.workflow_run.event == 'push'
       && github.event.workflow_run.head_repository.full_name == github.repository)
-    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/promote.yml@969b1ca89612dfb457792228c0120204c5498a41 # v0.6.165
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/promote.yml@c78def305daf3ad1defceeecf301167529ed1fb6 # v0.6.166
     secrets: inherit # zizmor: ignore[secrets-inherit]
     permissions:
       actions: write
       contents: read
     with:
-      public-self-hosted-runner: nddev-linux-light-public
+      hosted-runner: ubuntu-26.04
